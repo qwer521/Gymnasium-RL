@@ -1,0 +1,10 @@
+gymnasium==1.1.1
+ale-py==0.10.2
+numpy==1.26.4
+torch==2.6.0
+tensorboardX==2.6
+tensorboard==2.11.2
+tqdm==4.67.1
+opencv-python==4.11.0.86
+pillow==10.4.0
+matplotlib==3.5.1
