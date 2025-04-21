@@ -45,7 +45,12 @@ Train DDQN Agent. For BeamRider‑v5 in Atari environment
 ```
 python train_DDQN.py
 ```
-Checkpoints, videos and logs will be saved under checkpoints/ , videos/ and logs/.
+Checkpoints, videos and logs will be saved under `checkpoints` , `videos` and `logs`.
+### Monitor Training Progress
+You can monitor the training progress by viewing the videos in the `videos` folder or by looking at the graphs in TensorBoard:
+```
+tensorboard --logdir "logs"
+```
 ## Results
 ### PPO
 - **Half Cheetah reward**:  
