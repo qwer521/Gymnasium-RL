@@ -4,6 +4,9 @@ This repository contains AI‑Capstone Project 2 code for:
 - **PPO** on continuous‑control Mujoco environments (Humanoid, HalfCheetah, Walker2d, Ant)
 - **Double DQN** on the Atari game BeamRider‑v5
 ## Result
+https://github.com/user-attachments/assets/1354d400-445b-4f5e-8424-171e2ff334af  
+
+https://github.com/user-attachments/assets/194fda4b-b356-4b8f-955b-e78f6abc899e  
 
 ## Repository Structure
 ```
