@@ -4,9 +4,7 @@ This repository contains AI‑Capstone Project 2 code for:
 - **PPO** on continuous‑control Mujoco environments (Humanoid, HalfCheetah, Walker2d, Ant)
 - **Double DQN** on the Atari game BeamRider‑v5
 ## Result
-https://github.com/user-attachments/assets/1354d400-445b-4f5e-8424-171e2ff334af  
-
-https://github.com/user-attachments/assets/194fda4b-b356-4b8f-955b-e78f6abc899e  
+<img src="docs/humanoid.gif" alt="Demo" width="350"/> <img src="docs/ant.gif" alt="Demo" width="350"/> <img src="docs/beam.gif" alt="Demo" width="300"/>  
 
 ## Repository Structure
 ```
@@ -14,8 +12,8 @@ Gymnasium-RL/
 ├── vedios/           # Store the playing vedio
 ├── logs/             # Store training logs for tensorboard
 ├── checkpoints/      # Store checkpoint models
-├── train_PPO.py            # Main script for PPO
-├── train_DDQN.py           # Main script for DDQN
+├── train_PPO.py      # Main script for PPO
+├── train_DDQN.py     # Main script for DDQN
 └── requirements.txt  # Dependencies
 ```
 ## Setup
