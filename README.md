@@ -51,14 +51,38 @@ You can monitor the training progress by viewing the videos in the `videos` fold
 ```
 tensorboard --logdir "logs"
 ```
-## Results
-### PPO
-- **Half Cheetah reward**:  
-![Reward](/docs/Cheetah-reward.png)  
-- **Walker2D reward**:  
-![Reward](/docs/Walker-reward.png)  
-- **Ant reward**:  
-![Reward](/docs/Ant-reward.png)  
-### DDQN
-- **Beamrider reward**:  
-![Reward](/docs/beam-reward.png)  
+## Experiments
+### 1. DQN vs. Double DQN
+
+Compared standard DQN and Double DQN on the Atari BeamRider‑v5 environment. All results are computed over the **last 100 episodes** of training.  
+
+<img src="docs/DQN vs DDQN.png" alt="PPO Network Capacity Ablation"/>  
+
+*Colors: pink – DDQN, blue – DQN.*  
+
+| Method | Mean Reward         | Std Dev | Max Reward        | Min Reward        |
+|:-------|--------------------:|--------:|------------------:|------------------:|
+| DQN    | 1806.51            | 860.73  | 5602             | 528               |
+| DDQN   | 2169.88(+20.1%)  | 928.62  | 5404(-3.5%)    | 616(+16.7%)     |
+
+
+**Conclusion:** Double DQN increases mean reward by **20.1 %** and raises the worst‐case score by **16.7 %**, at the cost of a slightly lower peak.  
+
+---
+
+### 2. PPO Network Capacity Ablation
+
+We tested three network sizes (small, baseline, large) to see how MLP capacity influences PPO’s learning under a 500‑epoch budget.
+
+<img src="docs/PPO_Network_Capacity.png" alt="PPO Network Capacity Ablation"/>  
+
+*Colors: orange – Small, purple – Baseline, pink – Large.*  
+
+| Configuration | Final Mean Return    | Std Dev | Epoch to 80 % Baseline |
+|:-------------:|---------------------:|--------:|:----------------------:|
+| Small         | 7.61 (+10.3 %)       | 0.0535  | 297 (−8.3 %)           |
+| Baseline      | 6.90                  | 0.0856  | 324                     |
+| Large         | 6.44 (−6.7 %)        | 0.0235  | 295 (−8.9 %)           |
+
+
+**Conclusion:** The small network achieved a **10.3 %** higher final return and hit the 80 % threshold **8.3 %** faster than the baseline.
