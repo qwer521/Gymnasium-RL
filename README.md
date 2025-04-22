@@ -54,7 +54,7 @@ tensorboard --logdir "logs"
 ## Experiments
 ### 1. DQN vs. Double DQN
 
-Compared standard DQN and Double DQN on the Atari BeamRider‑v5 environment. All results are computed over the **last 100 episodes** of training.  
+Compared standard DQN and Double DQN on the Atari BeamRider‑v5 environment. All results are computed over the **last 200 episodes** of training.  
 
 <img src="docs/DQN vs DDQN.png" alt="PPO Network Capacity Ablation"/>  
 
